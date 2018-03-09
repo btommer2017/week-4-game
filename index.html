@@ -1,210 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>jQuery Calculator</title>
+    <meta charset="UTF-8">
+    <title>jQuery Calculator</title>
 
-  <!-- Added link to the jQuery Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <!-- Added a link to Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+        <!-- add link to css stylesheet that'll overide any previous css based on the bottom placement -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-  <div class="jumbotron">
-    <h1 id="mainTitle" class="text-center">Crystals Collector!!</h1>
-    <!-- <h3 class="text-center">Click on the crystals and add to your score to try and match the target number!</h3> -->
-  </div>
+    <div class="jumbotron">
+        <h1 id="mainTitle" class="text-center">Crystal Collector!!</h1>
+        <!-- <h3 class="text-center">Click on the crystals and add to your score to try and match the target number!</h3> -->
+    </div>
 
-  <div class="container">
+    <div class="container">
 
-    <div class="row">
+        <div class="row">
 
-      <!-- top blank panel -->
-      <div class="col-lg-12">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h2 class="panel-title"></h2>
-          </div>
-            <!-- Instruction Panel -->
-          <div class="panel-body">
-                <div id="instructions" class="col-lg-6">
-           <h4>You will be given a random number at the start of the game.</h4>
+            <!-- top blank panel -->
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div id="classHeading2" class="panel-heading">
+                        <h2 class="panel-title"></h2>
+                    </div>
+                    <!-- Instruction Panel -->
+                    <div id="panelBody" class="panel-body">
+                        <div id="instructions" class="col-lg-6">
+                            <h4>You will be given a random number at the start of the game.</h4>
 
-           <h4>There are four crystals below.  By clicking on a crystal, you will add a specific amount of points to your total score.</h4>
-          
-           <h4>You win the game by matching your total score to the random number.  You lose the game if your total score goes above the random number.</h4>
-          
-           <h4>The value of each crystal is hidden to you until you click on it.</h4>
-           
-           <h4>Each time the game starts, the game will change the values of each crystal</h4>
-          
-           <h4>Good luck!</h4>
-                </div>
-                <!-- <div class ="col-lg-6"><h4>blank space?</h4></div> -->
-            <br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br>
-            <div id="totalScoreTargetBox" class="col-lg-4">
-                    <h1 id="totalScoreTarget">0</h1>
-                         </div>
-                         <div id="winsLosesBox" class="col-lg-2">
-                                <h4>Wins:</h4>
-                                <h4>Loses:</h4>
-                                     </div> 
-            <br><br>    <br><br>   <br><br>  
-            <div id="crystal-1">
-                     <img src="assets/images/ruby.jpg" alt="ruby" style="width:145px;height:145px;">
-            </div>                              
-            <div id="crystal-2">
-                    <a href=""> <img src="assets/images/Blue-Crystal-Abstract.jpg" alt="blue crystal" style="width:145px;height:145px;">
-            </div>                              
-            <div id="crystal-3">
-                    <a href=""> <img src="assets/images/topaz.jpg" alt="topaz" style="width:145px;height:145px;">
-            </div>                              
-            <div id="crystal-4">
-                    <a href=""> <img src="assets/images/emerald.jpg" alt="emerald" style="width:145px;height:145px;">
-            </div>                              
-            
-            <!-- <button id="crystal-2" class="crystal" value=""><h1>2</h1></button>
+                            <h4>There are four crystals below. By clicking on a crystal, you will add a specific amount of points
+                                to your total score.</h4>
+
+                            <h4>You win the game by matching your total score to the random number. You lose the game if your
+                                total score goes above the random number.</h4>
+
+                            <h4>The value of each crystal is hidden to you until you click on it.</h4>
+
+                            <h4>Each time the game starts, the game will change the values of each crystal</h4>
+
+                            <h4>Good luck!</h4>
+                        </div>
+                        <!-- <div class ="col-lg-6"><h4>blank space?</h4></div> -->
+                        <br><br><br><br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div id="totalScoreTargetBox" class="col-lg-3">
+                            <h1 id="totalScoreTarget">0</h1>
+                        </div>
+                        <div id="winsLosesBox" class="col-lg-2">
+                            <h4 id="wins">Wins:</h4>
+                            <h4 id="losses">Loses:</h4>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div id="gem1" class="crystal" value=0>
+                            <img src="assets/images/ruby.jpg" alt="ruby" style="width:95%; height:95%;padding:2.5%;">
+                        </div>
+                        <div id="gem2" class="crystal" value=0>
+                            <img src="assets/images/Blue-Crystal-Abstract.jpg" alt="blue crystal" style="width:95%; height:95%;">
+                        </div>
+                        <div id="gem3 "class="crystal" value=0>
+                            <img src="assets/images/topaz.jpg" alt="topaz" style="width:95%; height:95%;">
+                        </div>
+                        <div id="gem4" class="crystal" value=0>
+                            <img src="assets/images/emerald.jpg" alt="emerald" style="width:95%; height:95%;">
+                        </div>
+
+                        <!-- <button id="crystal-2" class="crystal" value=""><h1>2</h1></button>
             <button id="crystal-3" class="crystal" value=""><h1>3</h1></button>
             <button id="crystal-4" class="crystal" value=""><h1>4</h1></button> -->
-            
-            <br><br><br><br>    <br><br>   <br><br> 
-            
-            <div class="panel-body">
-                    <div id="totalScoreTextBox" class="col-lg-6">
-               <h1>Your Total Score Is</h1>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        <!-- <div class="panel-body"> -->
+                            <div id="totalScoreTextBox" class="col-lg-6">
+                                <h3>Your Total Score Is</h3>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <div id="currentTotalScoreBox" class="col-lg-6">
+                                <h1 id="currentTotalScore">0</h1>
+                            </div>
+                        <!-- </div> -->
                     </div>
-                    <br><br><br><br><br>
-            <div id="currentTotalScoreBox" class="panel-body">
-                    <div class="col-lg-6">
-               <h1 id="currentTotalScore">0</h1>
-                    </div>
 
-          </div>
-        </div>
-      </div>
-     
-    </div>
-  </div>
+                </div>
+            </div>
 
-  <script type="text/javascript">
+            <script type="text/javascript">
+                $(document).ready(function () {
 
-    $(document).ready(function() {
-
-      // Make our variables global to the runtime of our application
-      var gem1;
-      var gem2;
-      var gem3;
-      var gem4;
-      var totalScore;
-      var totalScoreTarget;
-      var win = 0;
-      var loss = 0;
-
-
-      // Use a function to initialize our calculator.
-      // This way when the user hits clear, we can guarantee a reset of the app.
-      function initializeGame() {
-        gem1= Math.floor((Math.random() * 12) + 1);
-        gem2= Math.floor((Math.random() * 12) + 1);
-        gem3= Math.floor((Math.random() * 12) + 1);
-        gem4= Math.floor((Math.random() * 12) + 1);
-        totalScoreTarget = Math.floor((Math.random() * 101) + 19);
-        totalScore = 0;
-
-        $("#first-number, #second-number, #operator, #result").empty();
-      }
-
-      // Add an on click listener to all elements that have the class "number"
-      $(".number").on("click", function() {
-
-        // Check if we've already run a calculation, if so... we'll just.
-        if (isCalculated) return;
-
-        // If operator is chosen, we should be writing the secondNumber, otherwise, the firstNumber
-        if (isOperatorChosen) {
-          secondNumber += $(this).val();
-          $("#second-number").text(secondNumber);
-
-        }
-        else {
-          firstNumber +=  $(this).val();
-          $("#first-number").text(firstNumber);
-        }
-      });
-
-      // Add an on click listener to all elements that have the class "operator"
-      $(".operator").on("click", function() {
-        
-        // Check if a first number has already been selected
-        // Or we've already run a calculation, if so we just exit.
-        if (!firstNumber || isCalculated) return;
-
-        // Set isOperatorChosen to true so we start writing to secondNumber
-        isOperatorChosen = true;
-
-        // Store off the operator
-        operator =  $(this).val();
-
-        // Set the HTML of the #operator to the text of what was clicked
-        $("#operator").text($(this).text());
-
-      });
+                    // Make our variables global to the runtime of our application
+                    var gem1;
+                    var gem2;
+                    var gem3;
+                    var gem4;
+                    var totalScore;
+                    var totalScoreTarget;
+                    var win = 0;
+                    var loss = 0;
+                    isTotalEqualTarget = false;
+                    isTotalGreaterThanTarget =false;
+                    initializeGame();
+                    // function startNewGame() {
+                        // playGame();
+                    // }
+                    // Use a function to reset the game and assign new crystal values and target value.
+                     function initializeGame() {
+                        gem1 = Math.floor((Math.random() * 12) + 1);
+                        gem2 = Math.floor((Math.random() * 12) + 1);
+                        gem3 = Math.floor((Math.random() * 12) + 1);
+                        gem4 = Math.floor((Math.random() * 12) + 1);
+                        totalScoreTarget = Math.floor((Math.random() * 101) + 19);
+                        $("#totalScoreTarget").text(totalScoreTarget);
+                        $("#wins").text("Wins: " + win);
+                        $("#losses").text("Loses: " +loss);
+                        $("#gem1").val(gem1);
+                        $("#gem2").val(gem2);
+                        $("#gem3").val(gem3);
+                        $("#gem4").val(gem4);
 
 
-      // Add an on click listener to all elements that have the class "equal"
-      $(".equal").on("click", function() {
-
-        // If we already clicked equal, don't do the calculation again
-        if (isCalculated) return;
-
-        // Set isCalculated to true so that we don't get in a weird UI state by clicking buttons again
-        isCalculated = true;
-
-        // Use parseInt to convert our string representation of numbers into actual integers
-        firstNumber = parseInt(firstNumber);
-        secondNumber = parseInt(secondNumber);
-
-        // Based on the operator that was chosen.
-        // Then run the operation and set the HTML of the result of that operation
-        if (operator === "plus") {
-          result = firstNumber + secondNumber;
-        }
-        
-        else if (operator === "minus") {
-          result = firstNumber - secondNumber;
-        }
-
-        else if (operator === "times") {
-          result = firstNumber * secondNumber;
-        }
-
-        else if (operator === "divide") {
-          result = firstNumber / secondNumber;
-        }
-
-        else if (operator === "power") {
-          result = Math.pow(firstNumber, secondNumber);
-        }
-
-        $("#result").text(result);
-      });
-
-      // Add an on click listener to all elements that have the class "clear"
-      $(".clear").on("click", function() {
-
-        // Call initializeCalculater so we can reset the state of our app
-        initializeCalculator();
-
-      });
-
-      // Call initializeCalculater so we can set the state of our app
-      initializeCalculator();
-    });
-
-</script>
-
+                        totalScore = 0;
+                        isTotalEqualTarget = false;
+                    isTotalGreaterThanTarget =false;
+                     }
+//#########################################################################################################
+                    // Add an on click listener to all elements that have the class "crystal"
+                    $(".crystal").on("click", function () {
+                        // Check to see if totalScore < totalScoreTargetif (totalScore === totalScoreTarget) {
+                        if(isTotalGreaterThanTarget) {
+                            alert("You Lose");
+                            loss = loss+1;
+                            initializeGame();
+                        }
+                        if(isTotalEqualTarget) {
+                            alert("You win!");
+                            win = win+1;
+                            initializeGame();
+                        }
+                        else{
+                        console.log("gem1 = " +gem1);    
+                        console.log("gem2 = " +gem2);    
+                        console.log("gem3 = " +gem3);    
+                        console.log("gem4 = " +gem4);    
+                        console.log("totalScore = " +totalScore);    
+                        console.log("totalScoreTarget = " +totalScoreTarget);    
+                        console.log($(this).val());
+                        console.log(this + " = this");
+                            // totalScore =  $(this).val() + totalScore;
+                            totalScore = totalScore + $(this).val();
+                            $("#currentTotalScore").text(totalScore);
+                        }
+                         });
+//#########################################################################################################
+                        });
+            </script>
 </body>
 </html>
