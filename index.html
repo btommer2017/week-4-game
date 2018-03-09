@@ -31,26 +31,30 @@
                     </div>
                     <!-- Instruction Panel -->
                     <div id="panelBody" class="panel-body">
-                        <div id="instructionBox" class="col-lg-12">
-                            <div id="instructions" class="col-lg-6">
-                                <h4>You will be given a random number at the start of the game.</h4>
-                                <h4>There are four crystals below. By clicking on a crystal, you will add a specific amount of
-                                    points to your total score.</h4>
-                                <h4>You win the game by matching your total score to the random number. You lose the game if
-                                    your total score goes above the random number.</h4>
-                                <h4>The value of each crystal is hidden to you until you click on it.</h4>
-                                <h4>Each time the game starts, the game will change the values of each crystal.</h4>
-                                <h4>Good luck!</h4>
+                        <div class="col-lg-12">
+                            <div class="col-lg-6">
+                                <div id="instructions">
+                                    <h4>You will be given a random number at the start of the game.</h4>
+                                    <h4>There are four crystals below. By clicking on a crystal, you will add a specific amount
+                                        of points to your total score.</h4>
+                                    <h4>You win the game by matching your total score to the random number. You lose the game
+                                        if your total score goes above the random number.</h4>
+                                    <h4>The value of each crystal is hidden to you until you click on it.</h4>
+                                    <h4>Each time the game starts, the game will change the values of each crystal.</h4>
+                                    <h4>Good luck!</h4>
+                                </div>
                             </div>
                         </div>
                         <br>
                         <div class="col-lg-12">
-                            <div id="totalScoreTargetBox" class="col-lg-3">
-                                <h1 id="totalScoreTarget">0</h1>
-                            </div>
-                            <div id="winsLosesBox" class="col-lg-2">
-                                <h4 id="wins">Wins:</h4>
-                                <h4 id="losses">Loses:</h4>
+                            <div class="col-lg-6">
+                                <div id="totalScoreTargetBox">
+                                    <h1 id="totalScoreTarget">0</h1>
+                                </div>
+                                <div id="winsLosesBox">
+                                    <h4 id="wins">Wins:</h4>
+                                    <h4 id="losses">Loses:</h4>
+                                </div>
                             </div>
                         </div>
                         <br>
@@ -59,34 +63,39 @@
                                 <div id="gem1" class="crystal" value=0>
                                     <img src="assets/images/ruby.jpg" alt="ruby" style="width:95%; height:95%;padding:2.5%;">
                                 </div>
-                                <div id="gem2" class="crystal2" value=0>
+                                <div id="gem2" class="crystal" value=0>
                                     <img src="assets/images/Blue-Crystal-Abstract.jpg" alt="blue crystal" style="width:95%; height:95%;">
                                 </div>
-                                <div id="gem3" class="crystal2" value=0>
+                                <div id="gem3" class="crystal" value=0>
                                     <img src="assets/images/topaz.jpg" alt="topaz" style="width:95%; height:95%;">
                                 </div>
-                                <div id="gem4" class="crystal2" value=0>
+                                <div id="gem4" class="crystal" value=0>
                                     <img src="assets/images/emerald.jpg" alt="emerald" style="width:95%; height:95%;">
                                 </div>
                             </div>
                         </div>
                         <br>
                         <div class="col-lg-12">
-                            <div id="totalScoreTextBox" class="col-lg-6">
-                                <h3>Your Total Score Is</h3>
+                            <div class="col-lg-6">
+                                <div id="totalScoreTextBox">
+                                    <h3>Your Total Score Is</h3>
+                                </div>
                             </div>
                         </div>
                         <br>
                         <div class="col-lg-12">
-                            <div id="currentTotalScoreBox" class="col-lg-6">
-                                <h1 id="currentTotalScore">0</h1>
+                            <div class="col-lg-6">
+                                <div id="currentTotalScoreBox">
+                                    <h1 id="currentTotalScore">0</h1>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <script type="text/javascript" src="assets/javascript/game.js"></script>
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 
 </html>
