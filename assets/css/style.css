@@ -1,6 +1,6 @@
-#mainTitle {
-    /* font-size: 200px; */
-}
+/* #mainTitle {
+    font-size: 200px;
+} */
 
 .jumbotron {
     background-image: url("../images/backGround9.png");
@@ -11,9 +11,13 @@
 }
 
 #instructions {
+    padding:2%;
 border: solid 3px black;
 background-color: beige;
 color: darkgreen;
+width: 100%;
+margin-top:40px;
+float: left;
 }
 
 #panelBody {
@@ -21,41 +25,64 @@ color: darkgreen;
     /* background-image: url("../images/gemBackground3.jpg"); */
     /* background-image: url("../images/backGround2.png"); */
     background-image: url("../images/gemBackground2.jpg");
-   
-}
-.crystal {
-    border: solid 3px black;
-    height: 136px;
-    width: 136px;
-    float: left;
-    margin-left: 3px;
-    background-color: white;
 }
 
-  #winsLosesBox {
-    border: solid 3px black;
-    height: 100px;
-    margin-left: 5px;
-    padding-top: 11px;
-    font-weight: bolder;
-    color: black;
-    background-color: aliceblue;
-}
-#totalScoreTargetBox {
-    border: solid 3px black;
-    height: 100px;
-    background-color: aliceblue;
-        width: 33%;
+   #instructionBox {
+       margin-top:40px;
+      
+   }
+
+   
+   #totalScoreTargetBox {
+       border: solid 3px black;
+       height: 100px;
+       text-align: center;
+       background-color: aliceblue;
+       width: 60%;
+       margin-top:20px;
+       float: left;
     }
+    
+    #winsLosesBox {
+        border: solid 3px black;
+        height: 100px;
+        padding-top: 11px;
+        text-align: center;
+        font-weight: bolder;
+        float: left;
+        color: black;
+        background-color: aliceblue;
+        margin-top: 20px;
+        width: 35%;
+        margin-left: 5%;
+    }
+    
+    .crystal {
+        border: solid 4px black;
+        height: 136px;
+        width: 24%;
+        float: left;
+        background-color: white;
+        margin-top: 20px;
+    }
+
     #totalScoreTextBox {
     border: solid 3px black;
     height: 70px;
     text-align: center;
     background-color: aliceblue;
-  }
-  #currentTotalScoreBox {
+    margin-top:20px;
+    width:100%;
+    float: left;
+}
+
+#currentTotalScoreBox {
     border: solid 3px black;
     height: 70px;
     text-align: center;
     background-color: aliceblue;
+    margin-top:20px;
+    width:100%;
+    margin-bottom:40px;
+    float: left;
   }
