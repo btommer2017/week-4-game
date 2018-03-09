@@ -42,7 +42,8 @@
     width: 60%;
     margin-top: 20px;
     float: left;
-    background-image: url("../images/background3.jpg");
+    background-color: rgb(37, 69, 167);
+    /* background-image: url("../images/background3.jpg"); */
     color: white;
     padding-top: 8px;
 }
@@ -57,7 +58,8 @@
     margin-top: 20px;
     width: 35%;
     margin-left: 5%;
-    background-image: url("../images/background3.jpg");
+    background-color: rgb(37, 69, 167);
+    /* background-image: url("../images/background3.jpg"); */
     color: white;
 }
 
@@ -79,7 +81,8 @@
     margin-top: 20px;
     width: 100%;
     float: left;
-    background-image: url("../images/background3.jpg");
+    background-color: rgb(37, 69, 167);
+    /* background-image: url("../images/background3.jpg"); */
     color: white;
 }
 
@@ -91,7 +94,8 @@
     width: 100%;
     margin-bottom: 40px;
     float: left;
-    background-image: url("../images/background3.jpg");
+    background-color: rgb(37, 69, 167);
+    /* background-image: url("../images/background3.jpg"); */
     color: white;
     padding-bottom: 80px;
 }
