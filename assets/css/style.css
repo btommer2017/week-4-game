@@ -21,11 +21,11 @@
     background-color: rgb(37, 69, 167);
     /* background-image: url("../images/background3.jpg"); */
     color: white;
-    opacity:.8;
+    opacity:.85;
 }
 
 #instructions:hover {
-opacity:1;
+opacity:.94;
 }
 /* extra background images to easily change to */
 
@@ -82,9 +82,14 @@ opacity:1;
     opacity: .75;
 }
 .crystal:hover {
-opacity:1;
+opacity:.9;
 }
-
+.crystal:active {
+    opacity: .75;
+    background-color: rgb(37, 69, 167);
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
 #totalScoreTextBox {
     border: solid 3px black;
     height: 70px;
