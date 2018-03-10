@@ -46,9 +46,11 @@ $(document).ready(function () {
         $("#currentTotalScore").text(totalScore);
         if (totalScore === totalScoreTarget) {
             isTotalEqualTarget = true;
-            $("#currentTotalScore").text(totalScore);
-
-            alert("You Win!");
+            // $("#currentTotalScore").text(totalScore);
+            setTimeout(function () {
+                alert("You Win!");
+            }, 5);
+            
             setTimeout(function () {
                 win = win + 1;
             }, 1500);
@@ -60,8 +62,10 @@ $(document).ready(function () {
         if (totalScore > totalScoreTarget) {
             isTotalGreaterThanTarget = true;
             $("#currentTotalScore").text(totalScore);
-
-            alert("You Lose, Try Again!");
+            setTimeout(function () {
+                alert("You Lose, Try Again!");
+            }, 5);
+            
             setTimeout(function () {
                 loss = loss + 1;
             }, 1500);
