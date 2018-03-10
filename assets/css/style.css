@@ -9,6 +9,7 @@
 
 #classHeading2 {
     background-color: rgb(27, 4, 177);
+    opacity:.8;
 }
 
 #instructions {
@@ -20,8 +21,12 @@
     background-color: rgb(37, 69, 167);
     /* background-image: url("../images/background3.jpg"); */
     color: white;
+    opacity:.8;
 }
 
+#instructions:hover {
+opacity:1;
+}
 /* extra background images to easily change to */
 
 #panelBody {
@@ -46,6 +51,7 @@
     /* background-image: url("../images/background3.jpg"); */
     color: white;
     padding-top: 8px;
+    opacity:.8;
 }
 
 #winsLosesBox {
@@ -61,6 +67,7 @@
     background-color: rgb(37, 69, 167);
     /* background-image: url("../images/background3.jpg"); */
     color: white;
+    opacity:.8;
 }
 
 .crystal {
@@ -72,6 +79,10 @@
     margin-top: 20px;
     margin-right: .5%;
     margin-left: .5%;
+    opacity: .75;
+}
+.crystal:hover {
+opacity:1;
 }
 
 #totalScoreTextBox {
@@ -84,6 +95,7 @@
     background-color: rgb(37, 69, 167);
     /* background-image: url("../images/background3.jpg"); */
     color: white;
+    opacity:.8;
 }
 
 #currentTotalScoreBox {
@@ -98,4 +110,5 @@
     /* background-image: url("../images/background3.jpg"); */
     color: white;
     padding-bottom: 80px;
+    opacity:.8;
 }
